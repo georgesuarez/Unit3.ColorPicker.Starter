@@ -1,9 +1,18 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import "./index.css";
+
 // Write your Color component here
-const Color = ({ color, setSelectedColor }) => {
-    return <div className={color}
-    onClick={() => setSelectedColor(color)}></div>;
+const Color = ({ color, selectedColor, setSelectedColor }) => {
+    const isSelected = color === selectedColor;
+    return (
+        <div
+            className={`${color} ${isSelected ? "selected" : ""}`}
+            onClick={() => {
+                setSelectedColor(color);
+            }}
+        ></div>
+    );
 };
 
 const App = () => {
@@ -19,14 +28,17 @@ const App = () => {
                     <>
                         <Color
                             color="red"
+                            selectedColor={selectedColor}
                             setSelectedColor={setSelectedColor}
                         />
                         <Color
                             color="blue"
+                            selectedColor={selectedColor}
                             setSelectedColor={setSelectedColor}
                         />
                         <Color
                             color="green"
+                            selectedColor={selectedColor}
                             setSelectedColor={setSelectedColor}
                         />
                     </>
