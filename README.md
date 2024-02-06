@@ -1,3 +1,3 @@
 # 🎨 Color Picker
 
-Follow the instructions in the workshop to finish the assignment!
+Deployed @ https://earnest-baklava-09de34.netlify.app/
